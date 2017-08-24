@@ -1,0 +1,49 @@
+<div class="panel panel-default" ng-init="getBooks()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Formulário de avaliação</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+      <form ng-submit="addEval()">
+        <div class="form-group">
+          <label>Livro</label>
+          <select ng-model="review.livro" class="form-control">
+            <option ng-repeat="book in books" value="{{book.title}}">{{book.title}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Estado de Conservação</label>
+          <select ng-model="review.conserv" class="form-control">
+            <option value="Ótimo">Ótimo</option>
+            <option value="Bom">Bom</option>
+            <option value="Regular">Regular</option>
+            <option value="Ruim">Ruim</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Nota do conteudo</label>
+          <select ng-model="review.nota" class="form-control">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Observação</label>
+          <input type="text" class="form-control" ng-model="review.obs" placeholder="Comentários">
+        </div>
+        <button type="submit" class="btn btn-default">Enviar</button>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>

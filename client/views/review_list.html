@@ -1,0 +1,46 @@
+<div class="panel panel-default" ng-init="getReviews()">
+  <div class="panel-heading">
+    <h3 class="panel-title">Todas as avaliações</h3>
+  </div>
+
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-2">
+          <h4>Usuário</h4>
+        </div>
+        <div class="col-md-3">
+          <h4>Livro</h4>
+        </div>
+        <div class="col-md-2">
+          <h4>Conservação</h4>
+        </div>
+        <div class="col-md-1">
+          <h4>nota</h4>
+        </div>
+        <div class="col-md-4">
+          <h4>Comentário</h4>
+        </div>
+      </div>
+    	<div ng-repeat="review in reviews">
+    		<div class="col-md-12">
+          <div class="col-md-2">
+    				<h4>{{review.user}}</h4>
+    			</div>
+          <div class="col-md-3">
+    				<h4>{{review.livro}}</h4>
+    			</div>
+          <div class="col-md-2">
+    				<h4>{{review.conserv}}</h4>
+    			</div>
+          <div class="col-md-1">
+    				<h4>{{review.nota}}</h4>
+    			</div>
+          <div class="col-md-4">
+    				<h4>{{review.obs}}</h4>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+  </div>
+</div>
